@@ -4,6 +4,12 @@ Lecteur et éditeur PDF gratuit et libre pour Windows : lecture, modification du
 
 Licence MIT. Anciennement « Feuillet ».
 
+## Download
+
+Télécharger : [dernière version publiée](https://github.com/berners89/trombone/releases/latest) — `Trombone-Installation` (installateur, avec désinstallation) ou `Trombone-Portable` (un seul fichier, sans installation).
+
+Free code signing provided by [SignPath.io](https://signpath.io), certificate by [SignPath Foundation](https://signpath.org) — demande en cours, voir [Code signing policy](#code-signing-policy). D'ici là, Windows SmartScreen affiche un avertissement au premier lancement : « Informations complémentaires », puis « Exécuter quand même ».
+
 ## Lancer
 
 Prérequis : Node.js 20 ou plus récent.
