@@ -99,15 +99,17 @@ Electron (MIT), pdf.js (Apache 2.0), pdf-lib, @cantoo/pdf-lib et fontkit (MIT), 
 La couche plateforme est isolée : `src/platform.js` (Electron) et `src/platform-web.js` (navigateur)
 fournissent les mêmes fonctions à `src/app.mjs`. `test/e2e-web.js` teste cette version.
 
-## Politique de signature du code
+## Code signing policy
 
-Les exécutables Windows sont compilés par GitHub Actions à partir de ce dépôt (`.github/workflows/windows.yml`), sans étape manuelle.
+Politique de signature du code. Les exécutables Windows sont compilés par GitHub Actions à partir de ce dépôt (`.github/workflows/windows.yml`), sans étape manuelle. Chaque version signée est approuvée à la main.
 
-Signature en cours de demande : free code signing provided by [SignPath.io](https://signpath.io), certificate by [SignPath Foundation](https://signpath.org).
+Free code signing provided by [SignPath.io](https://signpath.io), certificate by [SignPath Foundation](https://signpath.org) (demande en cours : les versions actuelles ne sont pas encore signées).
 
-- Auteur et relecteur du code : Berners
-- Approbation des versions signées : Berners
+- Committers and reviewers : [Berners](https://github.com/berners89)
+- Approvers : [Berners](https://github.com/berners89)
 
-## Confidentialité
+## Privacy policy
+
+This program will not transfer any information to other networked systems unless specifically requested by the user or the person installing or operating it.
 
 Trombone ne transmet aucune information à un autre système en réseau. Les documents sont lus, modifiés et enregistrés uniquement sur l'ordinateur de l'utilisateur ; l'application ne contient ni télémétrie ni mise à jour automatique.
