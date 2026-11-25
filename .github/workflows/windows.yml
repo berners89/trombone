@@ -1,0 +1,26 @@
+# Compile Trombone sur un Windows de GitHub : installateur + version portable, sans rien installer chez soi.
+# La signature (SignPath, Certum ou Azure) viendra se brancher après l'étape « Compiler ».
+name: Windows
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Compiler
+        run: npm run dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: trombone-windows
+          path: |
+            dist/*.exe
+          if-no-files-found: error

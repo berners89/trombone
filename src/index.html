@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' data: blob:">
+<title>Trombone</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-select" viewBox="0 0 24 24"><path d="M6 3.5l12.5 7.6-5.6 1.5-2.4 5.6z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4.5 19.5l1-4.2L16.2 4.6l3.2 3.2L8.7 18.5z"/><path d="M14 6.8l3.2 3.2"/></symbol>
+    <symbol id="i-highlight" viewBox="0 0 24 24"><path d="M8.5 14.5l7-9 4 3.2-7 9z"/><path d="M8.5 14.5l-2 3.5h4.2l1.8-.3"/><path d="M4 21h16"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M5.5 7V4.5h13V7"/><path d="M12 4.5v15"/><path d="M9 19.5h6"/></symbol>
+    <symbol id="i-ink" viewBox="0 0 24 24"><path d="M3 16c2.6-8.5 5-8.5 6.5-2.5s4 6 5.5.5 3.2-5.5 6-2.5"/></symbol>
+    <symbol id="i-comment" viewBox="0 0 24 24"><path d="M4 5h16v11h-9.5L6.5 20v-4H4z"/><path d="M8 9h8"/><path d="M8 12h5"/></symbol>
+    <symbol id="i-redact" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 18h10"/><rect x="4" y="9.5" width="16" height="5" rx="1" fill="currentColor"/></symbol>
+    <symbol id="i-eraser" viewBox="0 0 24 24"><path d="M9 19.5l-4.5-4.5L14 5l5.5 5.5-9 9z"/><path d="M9.5 9.5l5.5 5.5"/><path d="M9 19.5h11"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="M8.5 5.5L4 10l4.5 4.5"/><path d="M4 10h10a5 5 0 010 10h-3"/></symbol>
+    <symbol id="i-redo" viewBox="0 0 24 24"><path d="M15.5 5.5L20 10l-4.5 4.5"/><path d="M20 10H10a5 5 0 000 10h3"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 32 32"><path d="M13 21V9.5a4.5 4.5 0 019 0V22a7.5 7.5 0 01-15 0V10.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+<header class="bar">
+  <div class="brand">
+    <svg class="logo" aria-hidden="true"><use href="#i-logo"/></svg>
+    <span class="wordmark">Trombone</span>
+    <span id="doc-name" class="doc-name"></span>
+  </div>
+  <div class="group">
+    <button id="btn-open" class="primary" title="Ouvrir un PDF (Ctrl+O)">Ouvrir</button>
+    <button id="btn-save" data-needs-doc title="Enregistrer une copie (Ctrl+S)">Enregistrer sous</button>
+  </div>
+  <div class="group" data-needs-doc>
+    <button id="btn-undo" class="icon" title="Annuler (Ctrl+Z)" aria-label="Annuler"><svg class="ico" aria-hidden="true"><use href="#i-undo"/></svg></button>
+    <button id="btn-redo" class="icon" title="Rétablir (Ctrl+Y)" aria-label="Rétablir"><svg class="ico" aria-hidden="true"><use href="#i-redo"/></svg></button>
+  </div>
+  <div class="group" data-needs-doc>
+    <button id="btn-zoom-out" class="icon" title="Zoom arrière (Ctrl+-)" aria-label="Zoom arrière">−</button>
+    <span id="zoom-label" class="readout">100 %</span>
+    <button id="btn-zoom-in" class="icon" title="Zoom avant (Ctrl++)" aria-label="Zoom avant">+</button>
+    <button id="btn-fit" title="Ajuster à la largeur">Largeur</button>
+  </div>
+  <div class="group" data-needs-doc>
+    <input id="page-input" type="number" min="1" value="1" aria-label="Page">
+    <span id="page-count" class="readout">/ 0</span>
+  </div>
+  <div class="group" data-needs-doc>
+    <details class="menu">
+      <summary>Pages</summary>
+      <div class="menu-list">
+        <button id="act-rotate-left">Pivoter à gauche</button>
+        <button id="act-rotate-right">Pivoter à droite</button>
+        <button id="act-move-up">Monter la page</button>
+        <button id="act-move-down">Descendre la page</button>
+        <button id="act-insert-blank">Insérer une page blanche après</button>
+        <button id="act-insert-pdf">Insérer un PDF après cette page…</button>
+        <button id="act-extract">Extraire des pages…</button>
+        <button id="act-delete" class="danger">Supprimer cette page</button>
+      </div>
+    </details>
+  </div>
+  <div class="group">
+    <details class="menu">
+      <summary>Outils</summary>
+      <div class="menu-list sections">
+        <section>
+          <h3>Convertir</h3>
+          <button id="act-merge">Fusionner des PDF…</button>
+          <button id="act-images">Images vers PDF…</button>
+          <button id="act-office">Word ou Excel vers PDF…</button>
+          <button id="act-word" data-needs-doc>Vers Word, mise en page conservée…</button>
+          <button id="act-word-text" data-needs-doc>Vers Word, texte seul…</button>
+          <button id="act-excel" data-needs-doc>Vers Excel (.xlsx)…</button>
+          <button id="act-export" data-needs-doc>Pages en images PNG…</button>
+        </section>
+        <section>
+          <h3>Ajouter</h3>
+          <button id="act-image" data-needs-doc>Image…</button>
+          <button id="act-sign" data-needs-doc>Signature…</button>
+          <button id="act-field-text" data-needs-doc>Champ de texte</button>
+          <button id="act-field-check" data-needs-doc>Case à cocher</button>
+          <button id="act-number" data-needs-doc>Numéros de page</button>
+          <button id="act-watermark" data-needs-doc>Filigrane…</button>
+        </section>
+        <section>
+          <h3>Lire et reconnaître</h3>
+          <button id="act-ocr" data-needs-doc>Reconnaître le texte (OCR)</button>
+          <button id="act-ocr-lang">Langue de l'OCR…</button>
+          <button id="act-comments" data-needs-doc>Commentaires</button>
+          <button id="act-outline" data-needs-doc>Signets</button>
+          <button id="act-fonts" data-needs-doc>Polices du document</button>
+        </section>
+        <section>
+          <h3>Finaliser</h3>
+          <button id="act-print" data-needs-doc>Imprimer…</button>
+          <button id="act-shrink" data-needs-doc>Réduire la taille du fichier</button>
+          <button id="act-protect" data-needs-doc>Protéger par mot de passe…</button>
+        </section>
+      </div>
+    </details>
+  </div>
+  <div class="group grow" data-needs-doc>
+    <input id="search" type="search" placeholder="Rechercher dans le document" aria-label="Rechercher">
+  </div>
+</header>
+
+<main class="layout">
+  <div class="rail tools" data-needs-doc role="radiogroup" aria-label="Outil">
+    <button data-tool="select" class="active" title="Sélectionner et copier du texte (Échap)"><svg class="ico" aria-hidden="true"><use href="#i-select"/></svg><span>Sélection</span></button>
+    <button data-tool="edit" title="Modifier un texte existant : cliquez sur un bloc"><svg class="ico" aria-hidden="true"><use href="#i-edit"/></svg><span>Modifier</span></button>
+    <button data-tool="text" title="Ajouter du texte"><svg class="ico" aria-hidden="true"><use href="#i-text"/></svg><span>Texte</span></button>
+    <button data-tool="highlight" title="Surligner une zone"><svg class="ico" aria-hidden="true"><use href="#i-highlight"/></svg><span>Surligner</span></button>
+    <button data-tool="ink" title="Dessin à main levée"><svg class="ico" aria-hidden="true"><use href="#i-ink"/></svg><span>Dessin</span></button>
+    <button data-tool="comment" title="Ajouter un commentaire : cliquez sur la page"><svg class="ico" aria-hidden="true"><use href="#i-comment"/></svg><span>Commenter</span></button>
+    <button data-tool="redact" title="Caviarder : masquer définitivement une zone"><svg class="ico" aria-hidden="true"><use href="#i-redact"/></svg><span>Caviarder</span></button>
+    <button data-tool="eraser" title="Supprimer une annotation"><svg class="ico" aria-hidden="true"><use href="#i-eraser"/></svg><span>Gomme</span></button>
+    <span class="swatches" id="swatches" aria-label="Couleur"></span>
+    <select id="text-size" title="Taille du texte ajouté" aria-label="Taille du texte">
+      <option>10</option><option selected>12</option><option>14</option><option>18</option><option>24</option>
+    </select>
+  </div>
+  <nav id="thumbs" class="thumbs" aria-label="Miniatures"></nav>
+  <section id="viewer" class="viewer" tabindex="0">
+    <div id="empty" class="empty">
+      <div class="sheet">
+        <svg class="clip" viewBox="0 0 32 32" aria-hidden="true"><path d="M13 21V9.5a4.5 4.5 0 019 0V22a7.5 7.5 0 01-15 0V10.5"/></svg>
+        <h1>Trombone</h1>
+        <p>Ouvrez un PDF, ou déposez-le sur cette page.</p>
+        <div class="row">
+          <button id="btn-open-empty" class="primary">Ouvrir un PDF</button>
+          <button id="btn-sample">Essayer avec un scan d'exemple</button>
+        </div>
+      </div>
+    </div>
+    <div id="pages"></div>
+  </section>
+  <aside id="panel" class="panel" hidden>
+    <div class="panel-head">
+      <h2 id="panel-title"></h2>
+      <button id="panel-close" title="Fermer">Fermer</button>
+    </div>
+    <div id="panel-body" class="panel-body"></div>
+  </aside>
+</main>
+<div id="toast" class="toast" role="status" hidden></div>
+<div id="print-root" aria-hidden="true"></div>
+
+<script src="../vendor/fontkit.umd.min.js"></script>
+<script src="../vendor/pdf-lib.min.js"></script>
+<script src="pdfops.js"></script>
+<script src="blocks.js"></script>
+<script src="office.js"></script>
+<script src="protect.js"></script>
+<script src="platform.js"></script>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

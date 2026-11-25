@@ -1,0 +1,381 @@
+/* Polices libres embarquées (aperçu identique au PDF enregistré). Chargées seulement si elles servent. */
+@font-face { font-family: "Roboto Mono"; font-weight: 400; font-style: normal; src: url("../fonts/RobotoMono-Regular.ttf"); }
+@font-face { font-family: "Roboto Mono"; font-weight: 700; font-style: normal; src: url("../fonts/RobotoMono-Bold.ttf"); }
+@font-face { font-family: "Roboto Mono"; font-weight: 400; font-style: italic; src: url("../fonts/RobotoMono-Italic.ttf"); }
+@font-face { font-family: "Roboto Mono"; font-weight: 700; font-style: italic; src: url("../fonts/RobotoMono-BoldItalic.ttf"); }
+@font-face { font-family: "Courier Prime"; font-weight: 400; font-style: normal; src: url("../fonts/CourierPrime-Regular.ttf"); }
+@font-face { font-family: "Courier Prime"; font-weight: 700; font-style: normal; src: url("../fonts/CourierPrime-Bold.ttf"); }
+@font-face { font-family: "Courier Prime"; font-weight: 400; font-style: italic; src: url("../fonts/CourierPrime-Italic.ttf"); }
+@font-face { font-family: "Courier Prime"; font-weight: 700; font-style: italic; src: url("../fonts/CourierPrime-BoldItalic.ttf"); }
+@font-face { font-family: "Liberation Mono"; font-weight: 400; font-style: normal; src: url("../fonts/LiberationMono-Regular.ttf"); }
+@font-face { font-family: "Liberation Mono"; font-weight: 700; font-style: normal; src: url("../fonts/LiberationMono-Bold.ttf"); }
+@font-face { font-family: "Liberation Mono"; font-weight: 400; font-style: italic; src: url("../fonts/LiberationMono-Italic.ttf"); }
+@font-face { font-family: "Liberation Mono"; font-weight: 700; font-style: italic; src: url("../fonts/LiberationMono-BoldItalic.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 400; font-style: normal; src: url("../fonts/Carlito-Regular.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 700; font-style: normal; src: url("../fonts/Carlito-Bold.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 400; font-style: italic; src: url("../fonts/Carlito-Italic.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 700; font-style: italic; src: url("../fonts/Carlito-BoldItalic.ttf"); }
+@font-face { font-family: "Caladea"; font-weight: 400; font-style: normal; src: url("../fonts/Caladea-Regular.ttf"); }
+@font-face { font-family: "Caladea"; font-weight: 700; font-style: normal; src: url("../fonts/Caladea-Bold.ttf"); }
+@font-face { font-family: "Caladea"; font-weight: 400; font-style: italic; src: url("../fonts/Caladea-Italic.ttf"); }
+@font-face { font-family: "Caladea"; font-weight: 700; font-style: italic; src: url("../fonts/Caladea-BoldItalic.ttf"); }
+@font-face { font-family: "Gelasio"; font-weight: 400; font-style: normal; src: url("../fonts/Gelasio-Regular.ttf"); }
+@font-face { font-family: "Gelasio"; font-weight: 700; font-style: normal; src: url("../fonts/Gelasio-Bold.ttf"); }
+@font-face { font-family: "Gelasio"; font-weight: 400; font-style: italic; src: url("../fonts/Gelasio-Italic.ttf"); }
+@font-face { font-family: "Gelasio"; font-weight: 700; font-style: italic; src: url("../fonts/Gelasio-BoldItalic.ttf"); }
+@font-face { font-family: "Comic Neue"; font-weight: 400; font-style: normal; src: url("../fonts/ComicNeue-Regular.ttf"); }
+@font-face { font-family: "Comic Neue"; font-weight: 700; font-style: normal; src: url("../fonts/ComicNeue-Bold.ttf"); }
+@font-face { font-family: "Comic Neue"; font-weight: 400; font-style: italic; src: url("../fonts/ComicNeue-Italic.ttf"); }
+@font-face { font-family: "Comic Neue"; font-weight: 700; font-style: italic; src: url("../fonts/ComicNeue-BoldItalic.ttf"); }
+@font-face { font-family: "Liberation Sans Narrow"; font-weight: 400; font-style: normal; src: url("../fonts/LiberationSansNarrow-Regular.ttf"); }
+@font-face { font-family: "Liberation Sans Narrow"; font-weight: 700; font-style: normal; src: url("../fonts/LiberationSansNarrow-Bold.ttf"); }
+@font-face { font-family: "Liberation Sans Narrow"; font-weight: 400; font-style: italic; src: url("../fonts/LiberationSansNarrow-Italic.ttf"); }
+@font-face { font-family: "Liberation Sans Narrow"; font-weight: 700; font-style: italic; src: url("../fonts/LiberationSansNarrow-BoldItalic.ttf"); }
+@font-face { font-family: "DejaVu Sans"; font-weight: 400; font-style: normal; src: url("../fonts/DejaVuSans-Regular.ttf"); }
+@font-face { font-family: "DejaVu Sans"; font-weight: 700; font-style: normal; src: url("../fonts/DejaVuSans-Bold.ttf"); }
+@font-face { font-family: "DejaVu Sans"; font-weight: 400; font-style: italic; src: url("../fonts/DejaVuSans-Italic.ttf"); }
+@font-face { font-family: "DejaVu Sans"; font-weight: 700; font-style: italic; src: url("../fonts/DejaVuSans-BoldItalic.ttf"); }
+@font-face { font-family: "EB Garamond"; font-weight: 400; font-style: normal; src: url("../fonts/EBGaramond-Regular.ttf"); }
+@font-face { font-family: "EB Garamond"; font-weight: 700; font-style: normal; src: url("../fonts/EBGaramond-Bold.ttf"); }
+@font-face { font-family: "EB Garamond"; font-weight: 400; font-style: italic; src: url("../fonts/EBGaramond-Italic.ttf"); }
+@font-face { font-family: "EB Garamond"; font-weight: 700; font-style: italic; src: url("../fonts/EBGaramond-BoldItalic.ttf"); }
+@font-face { font-family: "Roboto"; font-weight: 400; font-style: normal; src: url("../fonts/Roboto-Regular.ttf"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: normal; src: url("../fonts/Roboto-Bold.ttf"); }
+@font-face { font-family: "Roboto"; font-weight: 400; font-style: italic; src: url("../fonts/Roboto-Italic.ttf"); }
+@font-face { font-family: "Roboto"; font-weight: 700; font-style: italic; src: url("../fonts/Roboto-BoldItalic.ttf"); }
+@font-face { font-family: "Open Sans"; font-weight: 400; font-style: normal; src: url("../fonts/OpenSans-Regular.ttf"); }
+@font-face { font-family: "Open Sans"; font-weight: 700; font-style: normal; src: url("../fonts/OpenSans-Bold.ttf"); }
+@font-face { font-family: "Open Sans"; font-weight: 400; font-style: italic; src: url("../fonts/OpenSans-Italic.ttf"); }
+@font-face { font-family: "Open Sans"; font-weight: 700; font-style: italic; src: url("../fonts/OpenSans-BoldItalic.ttf"); }
+@font-face { font-family: "Lato"; font-weight: 400; font-style: normal; src: url("../fonts/Lato-Regular.ttf"); }
+@font-face { font-family: "Lato"; font-weight: 700; font-style: normal; src: url("../fonts/Lato-Bold.ttf"); }
+@font-face { font-family: "Lato"; font-weight: 400; font-style: italic; src: url("../fonts/Lato-Italic.ttf"); }
+@font-face { font-family: "Lato"; font-weight: 700; font-style: italic; src: url("../fonts/Lato-BoldItalic.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 400; font-style: normal; src: url("../fonts/Montserrat-Regular.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 700; font-style: normal; src: url("../fonts/Montserrat-Bold.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 400; font-style: italic; src: url("../fonts/Montserrat-Italic.ttf"); }
+@font-face { font-family: "Montserrat"; font-weight: 700; font-style: italic; src: url("../fonts/Montserrat-BoldItalic.ttf"); }
+@font-face { font-family: "Noto Serif"; font-weight: 400; font-style: normal; src: url("../fonts/NotoSerif-Regular.ttf"); }
+@font-face { font-family: "Noto Serif"; font-weight: 700; font-style: normal; src: url("../fonts/NotoSerif-Bold.ttf"); }
+@font-face { font-family: "Noto Serif"; font-weight: 400; font-style: italic; src: url("../fonts/NotoSerif-Italic.ttf"); }
+@font-face { font-family: "Noto Serif"; font-weight: 700; font-style: italic; src: url("../fonts/NotoSerif-BoldItalic.ttf"); }
+@font-face { font-family: "Noto Sans"; font-weight: 400; font-style: normal; src: url("../fonts/NotoSans-Regular.ttf"); }
+@font-face { font-family: "Noto Sans"; font-weight: 700; font-style: normal; src: url("../fonts/NotoSans-Bold.ttf"); }
+@font-face { font-family: "Noto Sans"; font-weight: 400; font-style: italic; src: url("../fonts/NotoSans-Italic.ttf"); }
+@font-face { font-family: "Noto Sans"; font-weight: 700; font-style: italic; src: url("../fonts/NotoSans-BoldItalic.ttf"); }
+@font-face { font-family: "Nunito"; font-weight: 400; font-style: normal; src: url("../fonts/Nunito-Regular.ttf"); }
+@font-face { font-family: "Nunito"; font-weight: 700; font-style: normal; src: url("../fonts/Nunito-Bold.ttf"); }
+@font-face { font-family: "Nunito"; font-weight: 400; font-style: italic; src: url("../fonts/Nunito-Italic.ttf"); }
+@font-face { font-family: "Nunito"; font-weight: 700; font-style: italic; src: url("../fonts/Nunito-BoldItalic.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 400; font-style: normal; src: url("../fonts/Poppins-Regular.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: normal; src: url("../fonts/Poppins-Bold.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 400; font-style: italic; src: url("../fonts/Poppins-Italic.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 700; font-style: italic; src: url("../fonts/Poppins-BoldItalic.ttf"); }
+@font-face { font-family: "Raleway"; font-weight: 400; font-style: normal; src: url("../fonts/Raleway-Regular.ttf"); }
+@font-face { font-family: "Raleway"; font-weight: 700; font-style: normal; src: url("../fonts/Raleway-Bold.ttf"); }
+@font-face { font-family: "Raleway"; font-weight: 400; font-style: italic; src: url("../fonts/Raleway-Italic.ttf"); }
+@font-face { font-family: "Raleway"; font-weight: 700; font-style: italic; src: url("../fonts/Raleway-BoldItalic.ttf"); }
+@font-face { font-family: "Playfair Display"; font-weight: 400; font-style: normal; src: url("../fonts/PlayfairDisplay-Regular.ttf"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: normal; src: url("../fonts/PlayfairDisplay-Bold.ttf"); }
+@font-face { font-family: "Playfair Display"; font-weight: 400; font-style: italic; src: url("../fonts/PlayfairDisplay-Italic.ttf"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: italic; src: url("../fonts/PlayfairDisplay-BoldItalic.ttf"); }
+@font-face { font-family: "Merriweather"; font-weight: 400; font-style: normal; src: url("../fonts/Merriweather-Regular.ttf"); }
+@font-face { font-family: "Merriweather"; font-weight: 700; font-style: normal; src: url("../fonts/Merriweather-Bold.ttf"); }
+@font-face { font-family: "Merriweather"; font-weight: 400; font-style: italic; src: url("../fonts/Merriweather-Italic.ttf"); }
+@font-face { font-family: "Merriweather"; font-weight: 700; font-style: italic; src: url("../fonts/Merriweather-BoldItalic.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: normal; src: url("../fonts/SourceSans3-Regular.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; font-style: normal; src: url("../fonts/SourceSans3-Bold.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 400; font-style: italic; src: url("../fonts/SourceSans3-Italic.ttf"); }
+@font-face { font-family: "Source Sans 3"; font-weight: 700; font-style: italic; src: url("../fonts/SourceSans3-BoldItalic.ttf"); }
+@font-face { font-family: "Liberation Serif"; font-weight: 400; font-style: normal; src: url("../fonts/LiberationSerif-Regular.ttf"); }
+@font-face { font-family: "Liberation Serif"; font-weight: 700; font-style: normal; src: url("../fonts/LiberationSerif-Bold.ttf"); }
+@font-face { font-family: "Liberation Serif"; font-weight: 400; font-style: italic; src: url("../fonts/LiberationSerif-Italic.ttf"); }
+@font-face { font-family: "Liberation Serif"; font-weight: 700; font-style: italic; src: url("../fonts/LiberationSerif-BoldItalic.ttf"); }
+@font-face { font-family: "Liberation Sans"; font-weight: 400; font-style: normal; src: url("../fonts/LiberationSans-Regular.ttf"); }
+@font-face { font-family: "Liberation Sans"; font-weight: 700; font-style: normal; src: url("../fonts/LiberationSans-Bold.ttf"); }
+@font-face { font-family: "Liberation Sans"; font-weight: 400; font-style: italic; src: url("../fonts/LiberationSans-Italic.ttf"); }
+@font-face { font-family: "Liberation Sans"; font-weight: 700; font-style: italic; src: url("../fonts/LiberationSans-BoldItalic.ttf"); }
+@font-face { font-family: "Tinos"; font-weight: 400; font-style: normal; src: url("../fonts/Tinos-Regular.ttf"); }
+@font-face { font-family: "Tinos"; font-weight: 700; font-style: normal; src: url("../fonts/Tinos-Bold.ttf"); }
+@font-face { font-family: "Tinos"; font-weight: 400; font-style: italic; src: url("../fonts/Tinos-Italic.ttf"); }
+@font-face { font-family: "Tinos"; font-weight: 700; font-style: italic; src: url("../fonts/Tinos-BoldItalic.ttf"); }
+
+/* Identité : le papier d'écolier français (réglure Seyès) — encre violette, marge rouge, feuille blanche. */
+:root {
+  --ink: #1e1a4d;
+  --ink-2: #2b2666;
+  --bg: #e7e6ef;
+  --surface: #ffffff;
+  --surface-2: #f6f5fb;
+  --line: #d8d6e6;
+  --text: #1d1b33;
+  --muted: #625f7a;
+  --accent: #5546d6;
+  --accent-strong: #4436b8;
+  --accent-soft: #ebe8fc;
+  --rule: #cfc9f6;
+  --margin: #e0455e;
+  --danger: #b3261e;
+  --shadow: 0 10px 30px rgba(30, 26, 77, .16);
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; background: var(--bg); overflow: hidden; }
+
+button, select, input, summary {
+  font: inherit; color: inherit; height: 32px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface);
+}
+button, summary { padding: 0 12px; cursor: pointer; white-space: nowrap; }
+button:hover, summary:hover { background: var(--surface-2); border-color: #c3bfdb; }
+button:disabled { opacity: .4; cursor: default; }
+button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 2px;
+}
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+button.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+button.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); font-weight: 600; }
+button.danger { color: var(--danger); }
+button.icon { width: 32px; padding: 0; display: inline-flex; align-items: center; justify-content: center; font-size: 17px; }
+input, select { padding: 0 8px; }
+.ico { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Barre du haut : l'encre. */
+.bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px;
+  padding: 8px 14px; background: var(--ink); color: #fff; position: relative;
+}
+.brand { display: flex; align-items: center; gap: 8px; min-width: 0; margin-right: 4px; }
+.logo { width: 26px; height: 26px; flex: none; }
+.wordmark { font-family: "EB Garamond", Georgia, serif; font-style: italic; font-size: 22px; line-height: 1; letter-spacing: .01em; }
+.doc-name { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #c9c5ea; padding-left: 10px; border-left: 1px solid rgba(255, 255, 255, .2); }
+.doc-name:empty { display: none; }
+.group { display: flex; align-items: center; gap: 4px; }
+.group.grow { flex: 1; min-width: 180px; justify-content: flex-end; }
+[data-needs-doc].off { opacity: .35; pointer-events: none; }
+.bar > .group > button:not(.primary), .bar summary, .bar > .group > input {
+  background: rgba(255, 255, 255, .07); border-color: rgba(255, 255, 255, .16); color: #fff;
+}
+.bar > .group > button:not(.primary):hover, .bar summary:hover, .bar details[open] > summary { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .3); }
+.bar button.primary { background: #fff; border-color: #fff; color: var(--ink); }
+.bar button.primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
+.bar :focus-visible { outline-color: #b9b0ff; }
+.bar input::placeholder { color: #aeaad2; }
+#page-input { width: 58px; text-align: right; }
+#search { width: 100%; max-width: 300px; }
+.readout { color: #c9c5ea; min-width: 46px; text-align: center; font-variant-numeric: tabular-nums; }
+
+.menu { position: relative; }
+.menu summary { list-style: none; display: flex; align-items: center; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary::after { content: ""; width: 6px; height: 6px; margin: -3px 0 0 8px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); opacity: .7; }
+.menu-list {
+  position: absolute; z-index: 20; top: 38px; left: 0; min-width: 240px; padding: 6px;
+  display: flex; flex-direction: column; gap: 1px; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+}
+.menu-list button { border: 0; text-align: left; border-radius: 6px; }
+.menu-list button:hover { background: var(--accent-soft); }
+.menu:has(.sections) { position: static; }
+.menu-list.sections { top: calc(100% - 2px); left: auto; right: 14px; display: grid; grid-template-columns: repeat(2, minmax(230px, 1fr)); gap: 4px 10px; padding: 10px; max-width: calc(100vw - 24px); max-height: calc(100vh - 70px); overflow-y: auto; }
+.menu-list.sections section { display: flex; flex-direction: column; gap: 1px; }
+.menu-list.sections h3 { margin: 4px 12px 4px; font-size: 12px; font-weight: 600; color: var(--muted); }
+@media (max-width: 620px) { .menu-list.sections { grid-template-columns: 1fr; left: 12px; right: 12px; } }
+
+.layout { flex: 1; display: flex; min-height: 0; }
+
+/* Colonne d'outils. */
+.rail {
+  width: 84px; flex: none; display: flex; flex-direction: column; align-items: stretch; gap: 2px; padding: 10px 6px; overflow-y: auto;
+  background: var(--surface); border-right: 1px solid var(--line);
+}
+.rail button[data-tool] {
+  height: auto; padding: 7px 2px 6px; display: flex; flex-direction: column; align-items: center; gap: 3px;
+  border-color: transparent; background: none; border-radius: 10px; font-size: 12px; color: var(--muted);
+}
+.rail button[data-tool]:hover { background: var(--surface-2); color: var(--text); }
+.rail button[data-tool].active { background: var(--accent-soft); color: var(--accent-strong); font-weight: 600; }
+.swatches { display: grid; grid-template-columns: repeat(3, 20px); justify-content: center; gap: 6px; margin: 10px 0 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.swatches:empty { display: none; }
+.swatch { width: 20px; height: 20px; padding: 0; border-radius: 50%; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--line); }
+.swatch.active { box-shadow: 0 0 0 2px var(--accent); }
+.rail select { width: 100%; height: 28px; font-size: 12px; }
+
+.thumbs {
+  width: 150px; flex: none; overflow-y: auto; padding: 12px 10px;
+  background: #dddbe8; border-right: 1px solid var(--line);
+}
+.thumbs:empty { display: none; }
+.thumb { display: block; width: 100%; height: auto; margin: 0 0 4px; padding: 5px; border: 2px solid transparent; background: none; border-radius: 8px; }
+.thumb:hover { background: rgba(255, 255, 255, .5); border-color: transparent; }
+.thumb canvas { display: block; width: 100%; background: #fff; box-shadow: 0 1px 3px rgba(30, 26, 77, .25); }
+.thumb span { display: block; margin-top: 4px; color: var(--muted); text-align: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.thumb.active { border-color: var(--accent); background: var(--accent-soft); }
+.thumb.active span { color: var(--accent-strong); font-weight: 600; }
+
+.viewer { flex: 1; overflow: auto; position: relative; outline: none; }
+.viewer.drop { box-shadow: inset 0 0 0 3px var(--accent); }
+#pages { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 22px; width: max-content; min-width: 100%; }
+#pages:empty { display: none; }
+.page { position: relative; background: #fff; box-shadow: 0 1px 2px rgba(30, 26, 77, .2), 0 8px 24px rgba(30, 26, 77, .12); }
+.page canvas { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+.page svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.page svg.drawing { cursor: crosshair; }
+.page svg.typing { cursor: text; }
+.page svg.erasing .annot { pointer-events: all; cursor: pointer; }
+.page svg .annot { pointer-events: none; }
+.page svg .textbox { fill: transparent; stroke: transparent; pointer-events: none; }
+.page svg.editing .textbox { pointer-events: all; cursor: move; fill: rgba(85, 70, 214, .05); stroke: rgba(85, 70, 214, .6); stroke-dasharray: 3 2; }
+.page svg.editing .textbox:hover { fill: rgba(85, 70, 214, .16); stroke: var(--accent); stroke-dasharray: none; }
+.page svg.editing .annot.edit { pointer-events: all; cursor: move; }
+.page svg .guide { stroke: var(--margin); stroke-width: 1; stroke-dasharray: 5 3; pointer-events: none; }
+.page svg .dragging { opacity: .75; }
+.page svg.editing .textbox.dragging { fill: rgba(85, 70, 214, .25); stroke: var(--accent); stroke-dasharray: none; }
+.page svg.editing .annot.edit:hover polygon { stroke: var(--accent); stroke-width: 1; }
+.page textarea.note.edit {
+  position: absolute; z-index: 5; margin: 0; padding: 0 2px; border: 1px solid var(--accent); border-radius: 0;
+  resize: none; overflow: hidden; white-space: pre-wrap; overflow-wrap: break-word; outline: none; box-sizing: content-box;
+}
+.page input.note {
+  position: absolute; z-index: 5; height: auto; padding: 0 2px; min-width: 120px;
+  border: 1px dashed var(--accent); border-radius: 2px; background: rgba(255,255,255,.9);
+  font-family: Arial, Helvetica, sans-serif; line-height: 1.15;
+}
+
+/* Accueil : une feuille Seyès posée sur le bureau. */
+.empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.empty .sheet {
+  width: min(640px, 100%); padding: 64px 40px 64px 120px; border-radius: 3px;
+  background:
+    linear-gradient(90deg, transparent 95px, var(--margin) 95px, var(--margin) 97px, transparent 97px),
+    repeating-linear-gradient(0deg, transparent 0 31px, var(--rule) 31px 32px),
+    repeating-linear-gradient(0deg, transparent 0 7px, #f1effc 7px 8px),
+    repeating-linear-gradient(90deg, transparent 0 31px, #dedaf8 31px 32px),
+    #fff;
+  box-shadow: 0 1px 2px rgba(30, 26, 77, .2), 0 18px 44px rgba(30, 26, 77, .16);
+}
+.empty .sheet { position: relative; }
+.empty .clip { position: absolute; top: -26px; left: 22px; width: 56px; height: 72px; fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; filter: drop-shadow(0 1px 1px rgba(30, 26, 77, .3)); }
+.empty h1 { margin: 0; font-family: "EB Garamond", Georgia, serif; font-style: italic; font-weight: 500; font-size: 76px; line-height: 64px; padding-top: 0; color: var(--accent-strong); }
+.empty p { margin: 32px 0 32px; font-size: 17px; line-height: 32px; color: var(--text); }
+.empty .row { display: flex; flex-wrap: wrap; gap: 8px; }
+.empty button { height: 36px; }
+.viewer.drop .sheet { transform: scale(1.02); }
+@media (prefers-reduced-motion: no-preference) { .empty .sheet { transition: transform .18s ease-out; } }
+@media (max-width: 560px) { .empty .sheet { padding-left: 96px; padding-right: 20px; } .empty h1 { font-size: 48px; } }
+
+.panel { width: 320px; flex: none; display: flex; flex-direction: column; background: var(--surface); border-left: 1px solid var(--line); }
+.panel[hidden] { display: none; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.panel-head h2 { margin: 0; font-family: "EB Garamond", Georgia, serif; font-size: 21px; font-weight: 500; }
+.panel-body { flex: 1; overflow-y: auto; padding: 8px 14px 16px; }
+.panel-body p { color: var(--muted); line-height: 1.45; }
+.hit { display: block; width: 100%; height: auto; padding: 8px; margin-bottom: 4px; text-align: left; white-space: normal; border: 0; border-radius: 8px; }
+.hit b { color: var(--accent-strong); }
+.hit small { display: block; color: var(--muted); margin-bottom: 2px; }
+.hit mark { background: #ffe58a; }
+.font-row { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.font-row strong { display: block; font-size: 14px; }
+.font-row small { color: var(--muted); }
+.tag { display: inline-block; margin: 4px 4px 0 0; padding: 1px 8px; border-radius: 10px; font-size: 12px; background: var(--surface-2); color: var(--muted); }
+.tag.ok { background: #e2f4e8; color: #17663a; }
+.tag.warn { background: #fdecd2; color: #8a4b08; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 50; max-width: 70vw; cursor: pointer;
+  padding: 11px 18px; border-radius: 10px; background: var(--ink); color: #fff; box-shadow: var(--shadow); line-height: 1.35;
+}
+.toast.error { background: var(--danger); }
+.toast[hidden] { display: none; }
+
+/* Couche de texte sélectionnable (d'après pdf.js, licence Apache 2.0). */
+.textLayer {
+  position: absolute; inset: 0; overflow: clip; line-height: 1; text-align: initial; letter-spacing: normal; word-spacing: normal;
+  text-size-adjust: none; forced-color-adjust: none; transform-origin: 0 0; z-index: 1; display: none;
+  --min-font-size: 1; --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size)); --min-font-size-inv: calc(1 / var(--min-font-size));
+}
+.page.selecting .textLayer { display: block; }
+.textLayer :is(span, br) { color: transparent; position: absolute; white-space: pre; cursor: text; transform-origin: 0% 0%; user-select: text; }
+.textLayer > :not(.markedContent), .textLayer .markedContent span:not(.markedContent) {
+  z-index: 1; --font-height: 0; font-size: calc(var(--text-scale-factor) * var(--font-height)); --scale-x: 1; --rotate: 0deg;
+  transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv));
+}
+.textLayer .markedContent { display: contents; }
+.textLayer ::selection { background: rgba(85, 70, 214, .3); }
+.textLayer .endOfContent { display: block; position: absolute; inset: 100% 0 0; z-index: 0; cursor: default; user-select: none; }
+.page svg { z-index: 2; }
+
+/* Miniatures : réorganisation par glisser-déposer. */
+.thumb.drop-before { box-shadow: 0 -3px 0 var(--accent); }
+.thumb.drop-after { box-shadow: 0 3px 0 var(--accent); }
+.thumb.dragged { opacity: .4; }
+
+/* Barre de style affichée pendant la saisie d'un bloc. */
+.stylebar {
+  position: absolute; z-index: 6; display: flex; align-items: center; gap: 4px; padding: 4px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow);
+}
+.stylebar button, .stylebar select { height: 26px; padding: 0 7px; font-size: 12px; }
+.stylebar .swatch { width: 18px; height: 18px; padding: 0; }
+.stylebar .size { min-width: 34px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Images et signatures posées sur la page. */
+.page svg .annot.image .handle { display: none; fill: var(--accent); stroke: #fff; stroke-width: 1; cursor: nwse-resize; }
+.page svg .annot.image .frame { fill: none; stroke: none; }
+.page svg.editing .annot.image { pointer-events: all; cursor: move; }
+.page svg.editing .annot.image .handle { display: block; }
+.page svg.editing .annot.image .frame { stroke: rgba(85, 70, 214, .6); stroke-dasharray: 3 2; }
+
+/* Panneau : formulaires simples et zone de signature. */
+.panel-body .field { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.panel-body .field input { width: 100%; }
+.panel-body .row { display: flex; gap: 6px; margin-top: 8px; }
+.panel-body canvas.pad { display: block; width: 100%; height: 130px; border: 1px dashed var(--line); border-radius: 6px; background: #fff; touch-action: none; cursor: crosshair; }
+.outline-item { display: block; width: 100%; height: auto; padding: 6px 8px; text-align: left; white-space: normal; border: 0; border-radius: 6px; }
+
+/* Formulaires : champs à remplir posés sur la page (outil Sélection). */
+.formLayer { position: absolute; inset: 0; z-index: 3; display: none; pointer-events: none; }
+.page.selecting .formLayer { display: block; }
+.formLayer > * {
+  position: absolute; pointer-events: auto; margin: 0; height: auto; box-sizing: border-box; border-radius: 2px;
+  border: 1px solid rgba(85, 70, 214, .55); background: rgba(235, 232, 252, .75); font-family: Arial, Helvetica, sans-serif; color: #111;
+}
+.formLayer textarea { resize: none; padding: 2px 3px; }
+.formLayer input[type="text"] { padding: 0 3px; }
+.formLayer input[type="checkbox"], .formLayer input[type="radio"] { accent-color: var(--accent); }
+.formLayer :read-only:not(select), .formLayer :disabled { background: rgba(230, 230, 230, .6); border-color: #aaa; }
+
+/* Zones à caviarder : noires, légèrement transparentes tant que le document n'est pas enregistré. */
+.page svg .annot.redact { fill: #000; fill-opacity: .82; stroke: #b42318; stroke-width: 1; stroke-dasharray: 4 3; }
+.panel-body .field input[type="password"] { width: 100%; }
+
+.stylebar .origin { padding: 0 6px; font-size: 11px; color: var(--muted); white-space: nowrap; max-width: 190px; overflow: hidden; text-overflow: ellipsis; }
+.stylebar .origin.missing { color: #8a4b08; background: #fdecd2; border-radius: 10px; }
+
+/* Commentaires : petite note jaune, visible et cliquable avec tous les outils. */
+.page svg .note-icon { pointer-events: all; cursor: pointer; }
+.page svg .note-icon rect { fill: #ffd84a; stroke: #8a6a00; stroke-width: 1; }
+.page svg .note-icon path { fill: none; stroke: #8a6a00; stroke-width: 1.2; }
+.page textarea.note.comment {
+  position: absolute; z-index: 6; width: 220px; height: 84px; padding: 6px; resize: none; border-radius: 6px;
+  border: 1px solid #8a6a00; background: #fff8d6; font: 13px/1.35 "Segoe UI", system-ui, sans-serif; color: #222;
+}
+.comment-row { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.comment-row small { color: var(--muted); display: block; margin-bottom: 2px; }
+.comment-row p { margin: 0 0 6px; color: var(--text); white-space: pre-wrap; }
+.comment-row .row { margin-top: 0; }
+/* Champs de formulaire en cours de création. */
+.page svg .annot.field { fill: rgba(23, 102, 58, .12); stroke: #17663a; stroke-width: 1; stroke-dasharray: 4 3; }
+.page svg .annot.field-label { fill: #17663a; font: 10px "Segoe UI", system-ui, sans-serif; }
+/* Impression : seules les pages rendues en image sont imprimées. */
+#print-root { display: none; }
+@media print {
+  body > *:not(#print-root) { display: none !important; }
+  html, body { height: auto; overflow: visible; background: #fff; }
+  #print-root { display: block; }
+  #print-root img { display: block; width: 100%; height: auto; page-break-after: always; break-after: page; }
+  @page { margin: 0; }
+}
