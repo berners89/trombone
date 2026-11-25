@@ -1,13 +1,19 @@
-# Compile Trombone sur un Windows de GitHub : installateur + version portable, sans rien installer chez soi.
-# La signature (SignPath, Certum ou Azure) viendra se brancher après l'étape « Compiler ».
+# Compile Trombone sur un Windows de GitHub : installateur + version portable.
+# Lancé à la main ; cocher « publier » crée en plus la version publique (Release) correspondante.
+# La signature viendra se brancher après l'étape « Compiler ».
 name: Windows
 on:
   workflow_dispatch:
-  push:
-    tags: ['v*']
+    inputs:
+      publier:
+        description: Publier une version publique (Release) avec les exécutables
+        type: boolean
+        default: false
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,3 +30,12 @@ jobs:
           path: |
             dist/*.exe
           if-no-files-found: error
+      - name: Publier la version
+        if: ${{ inputs.publier }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          gh release create "v$version" "dist/Trombone-Installation-$version.exe" "dist/Trombone-Portable-$version.exe" \
+            --target "$GITHUB_SHA" --title "Trombone $version" --notes-file .github/notes-version.md
