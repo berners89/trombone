@@ -1,6 +1,6 @@
 {
   "name": "trombone",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Lecteur et éditeur PDF gratuit pour Windows",
   "main": "main.js",
   "scripts": {

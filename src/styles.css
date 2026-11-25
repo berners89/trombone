@@ -164,6 +164,8 @@ input, select { padding: 0 8px; }
 .bar button.primary:hover { background: var(--accent-soft); border-color: var(--accent-soft); }
 .bar :focus-visible { outline-color: #b9b0ff; }
 .bar input::placeholder { color: #aeaad2; }
+#btn-print { display: inline-flex; align-items: center; gap: 6px; }
+#btn-print .ico { width: 18px; height: 18px; }
 #page-input { width: 58px; text-align: right; }
 #search { width: 100%; max-width: 300px; }
 .readout { color: #c9c5ea; min-width: 46px; text-align: center; font-variant-numeric: tabular-nums; }

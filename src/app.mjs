@@ -2249,8 +2249,9 @@ click('act-comments', showComments);
 click('act-field-text', () => startField('text'));
 click('act-field-check', () => startField('checkbox'));
 click('act-print', printDocument);
+click('btn-print', printDocument);
 click('act-ocr-lang', chooseOcrLanguage);
-if (!config.canPrint) $('act-print').remove();
+if (!config.canPrint) { $('act-print').remove(); $('btn-print').remove(); }
 click('act-protect', saveProtected);
 click('act-merge', mergeFiles);
 click('act-images', imagesToPdf);
@@ -2285,6 +2286,7 @@ document.addEventListener('keydown', (event) => {
   const key = event.key.toLowerCase();
   if (ctrl && key === 'o') { event.preventDefault(); guard(openDialog); }
   else if (ctrl && key === 's') { event.preventDefault(); guard(save); }
+  else if (ctrl && key === 'p') { event.preventDefault(); if (config.canPrint && state.pdf) guard(printDocument); }
   else if (ctrl && key === 'f') { event.preventDefault(); $('search').focus(); }
   else if (ctrl && key === 'z' && !event.shiftKey && !/INPUT|TEXTAREA/.test(event.target.tagName)) { event.preventDefault(); undo(); }
   else if (ctrl && (key === 'y' || (key === 'z' && event.shiftKey)) && !/INPUT|TEXTAREA/.test(event.target.tagName)) { event.preventDefault(); redo(); }
